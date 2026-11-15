@@ -2,7 +2,7 @@
 // - The report (index.html): network first. Online you get the newest report, offline the last one saved.
 // - Everything else (chart.js, icons, manifest): cache first. chess_coach/site.py fills in VERSION from these
 //   files, so when one of them changes, this file changes too and the phone downloads them again.
-const VERSION = "2b579e9a2133";
+const VERSION = "dadb713ecd4c";
 const CACHE = "chess-coach-" + VERSION;
 const PAGE = "./index.html";
 const FILES = ["./index.html", "./apple-touch-icon.png", "./chart.umd.min.js", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./icon.svg", "./manifest.webmanifest"];
