@@ -1,0 +1,31 @@
+{
+  "programs": [
+    {"name": "Stockfish 19", "what": "Checks every move of your games", "license": "GPL-3.0", "url": "https://stockfishchess.org/"},
+    {"name": "Maia-3 (CSSLab, University of Toronto)", "what": "The human-like move model behind Gojo bot (its code)", "license": "AGPL-3.0", "url": "https://github.com/CSSLab/maia3"},
+    {"name": "Maia-3 23M model file", "what": "Gojo bot's starting point, fine-tuned on your moves", "license": "No license stated", "url": "https://huggingface.co/UofTCSSLab/Maia3-23M"},
+    {"name": "python-chess", "what": "Moves, boards and game files", "license": "GPL-3.0", "url": "https://github.com/niklasf/python-chess"},
+    {"name": "PyTorch", "what": "Runs the bot's model", "license": "BSD-3-Clause", "url": "https://github.com/pytorch/pytorch"},
+    {"name": "NumPy", "what": "Numbers for the bot", "license": "BSD-3-Clause", "url": "https://github.com/numpy/numpy"},
+    {"name": "Chart.js 4.4.1", "what": "The charts", "license": "MIT", "url": "https://github.com/chartjs/Chart.js"},
+    {"name": "pywebview", "what": "The app window (Windows' own Edge WebView2)", "license": "BSD-3-Clause", "url": "https://github.com/r0x0r/pywebview"},
+    {"name": "pythonnet, clr_loader, cffi, bottle, proxy_tools", "what": "What pywebview needs on Windows", "license": "MIT", "url": "https://github.com/pythonnet/pythonnet"},
+    {"name": "requests", "what": "Downloads your games from chess.com", "license": "Apache-2.0", "url": "https://github.com/psf/requests"},
+    {"name": "tzdata", "what": "Time zones", "license": "Apache-2.0", "url": "https://github.com/python/tzdata"},
+    {"name": "Ollama (optional, not part of the app)", "what": "Runs the local model that writes the weekly note", "license": "MIT", "url": "https://github.com/ollama/ollama"}
+  ],
+  "pieces": [
+    {"id": "cburnett", "name": "Classic", "author": "Colin M.L. Burnett", "license": "GPL-2.0+"},
+    {"id": "merida", "name": "Merida", "author": "Armando Hernandez Marroquin", "license": "GPL-2.0+"},
+    {"id": "chessnut", "name": "Chessnut", "author": "Alexis Luengas", "license": "Apache-2.0"},
+    {"id": "mpchess", "name": "MPChess", "author": "Maxime Chupin", "license": "GPL-3.0+"},
+    {"id": "fantasy", "name": "Fantasy", "author": "Maurizio Monge", "license": "MIT"},
+    {"id": "celtic", "name": "Celtic", "author": "Maurizio Monge", "license": "MIT"},
+    {"id": "spatial", "name": "Spatial", "author": "Maurizio Monge", "license": "MIT"},
+    {"id": "firi", "name": "Firi", "author": "James Faure", "license": "CC BY 4.0"},
+    {"id": "kiwen-suwi", "name": "Kiwen-suwi", "author": "neverRare", "license": "CC BY 4.0"},
+    {"id": "pixel", "name": "Pixel", "author": "therealqtpi", "license": "AGPL-3.0+"},
+    {"id": "letter", "name": "Letter", "author": "usolando", "license": "AGPL-3.0+"},
+    {"id": "shapes", "name": "Shapes", "author": "flugsio", "license": "CC BY-SA 4.0"},
+    {"id": "rhosgfx", "name": "RhosGFX", "author": "RhosGFX", "license": "CC0 1.0"}
+  ]
+}

@@ -1,0 +1,178 @@
+/* The old report's section styles (made once from chess_coach/report_template.html), under .report so they only
+   touch the sections Review and Progress show. The colors are the app's variables (app.css). */
+.report .tall, .report .thin { animation: wipe 0.9s var(--ease) both; }
+@keyframes wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+.report .ranked .fill { transform-origin: left center; animation: grow 0.85s var(--ease) both; }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (max-width: 520px) {
+.report h2 { font-size: 17px; }
+}
+.report h2 { font-size: 18px; margin: 0 0 4px; font-weight: 650; }
+.report h3 { font-size: 14px; margin: 18px 0 8px; font-weight: 600; }
+.report .sub { color: var(--text-2); margin: 0 0 16px; max-width: 76ch; }
+.report .note { color: var(--text-2); font-size: 12.5px; margin: 12px 0 0; max-width: 90ch; }
+.report .empty { color: var(--text-2); font-style: italic; }
+.report .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 18px; }
+.report .kpi { border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+.report .kpi .label { color: var(--text-2); font-size: 13px; }
+.report .kpi .value { font-size: 26px; font-weight: 600; line-height: 1.25; }
+.report .kpi .extra { color: var(--text-2); font-size: 12.5px; }
+.report .kpi .value.text { font-size: 17px; line-height: 1.35; padding: 4px 0 2px; }
+.report .tall { display: flex; gap: 2px; height: 28px; }
+.report .tall .block { flex: 1 1 0; min-width: 0; border-radius: 4px; display: flex; align-items: center; padding-left: 8px;
+    font-size: 13px; font-weight: 600; white-space: nowrap; }
+.report .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; color: var(--text-2); font-size: 13px; }
+.report .legend .li { display: inline-flex; align-items: center; gap: 6px; }
+.report .legend i { display: inline-block; }
+.report .legend i.box { width: 10px; height: 10px; border-radius: 2px; }
+.report .legend i.line { width: 14px; height: 2px; border-radius: 1px; }
+.report .two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; }
+.report .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 28px; }
+@media (max-width: 860px) {
+.report .two, .report .three { grid-template-columns: 1fr; }
+}
+.report .two > *, .report .three > * { min-width: 0; }
+.report .scroll { overflow-x: auto; }
+.report table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.report th { text-align: left; font-weight: 600; font-size: 12.5px; color: var(--text-2); padding: 6px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+.report td { padding: 7px 8px; border-bottom: 1px solid var(--grid); vertical-align: middle; }
+.report tbody tr:last-child td { border-bottom: 0; }
+.report tbody tr.hoverable:hover td { background: var(--hover); }
+.report th.num, .report td.num { text-align: right; white-space: nowrap; }
+.report td.small { color: var(--text-2); }
+.report .thin { display: flex; gap: 2px; height: 8px; min-width: 90px; border-radius: 4px; overflow: hidden; }
+.report .thin span { flex: 1 1 0; min-width: 0; }
+.report .delta { white-space: nowrap; }
+.report .delta.small { color: var(--text-2); }
+.report .delta .arrow { font-size: 10px; }
+.report .delta .arrow.up { color: var(--up); }
+.report .delta .arrow.down { color: var(--down); }
+.report .ranked { display: grid; gap: 10px; }
+.report .ranked .row { display: grid; grid-template-columns: minmax(150px, 1.7fr) 1.5fr auto; gap: 12px; align-items: center; border-radius: 6px; }
+.report .ranked .row:hover { background: var(--hover); }
+.report .ranked .track { height: 10px; }
+.report .ranked .fill { height: 100%; border-radius: 0 4px 4px 0; min-width: 2px; }
+.report .ranked .fig { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; font-weight: 600; min-width: 64px; }
+.report .ranked .fig small { font-weight: 400; color: var(--text-2); font-size: 12px; }
+.report .ranked .row.small .fig { color: var(--text-2); }
+@media (max-width: 520px) {
+.report .ranked .row { grid-template-columns: 1fr auto; }
+.report .ranked .track { grid-column: 1 / -1; grid-row: 2; }
+}
+.report #phase-table, .report #clock-table { margin-top: 14px; }
+.report #ends h4 { font-size: 13.5px; font-weight: 600; color: var(--text-2); margin: 6px 0 8px; }
+.report .chart { position: relative; height: 220px; }
+.report .chart.big { height: 340px; }
+.report details { margin-top: 14px; }
+.report summary { cursor: pointer; color: var(--text-2); font-size: 13px; }
+.report .chart-title { font-size: 13px; font-weight: 600; color: var(--text-2); margin: 6px 0 4px; }
+.report .defs ul { margin: 8px 0 0; padding-left: 18px; color: var(--text-2); max-width: 90ch; }
+.report .defs li { margin: 6px 0; }
+.report .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--text-2); }
+.report .badge i { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.report .reel { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+.report .hl { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+.report .hl .board { display: block; width: 100%; height: auto; }
+.report .hl .body { padding: 10px 12px 12px; display: grid; gap: 4px; font-size: 13px; }
+.report .hl .title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.report .hl .move { font-size: 15px; font-weight: 650; }
+.report .hl .line, .report .hl .meta, .report .hl .small { color: var(--text-2); }
+.report .hl .meta { font-size: 12.5px; }
+.report .hl a { color: var(--win); font-weight: 550; text-decoration: none; }
+.report .hl a:hover { text-decoration: underline; }
+.report .hl a:focus-visible { outline: 2px solid var(--win); outline-offset: 2px; }
+.report .sq-light { fill: #f0d9b5; }
+.report .sq-dark { fill: #b58863; }
+.report .coord { font: 600 9px system-ui, -apple-system, "Segoe UI", sans-serif; }
+.report .coord.on-light { fill: #b58863; }
+.report .coord.on-dark { fill: #f0d9b5; }
+.report .arrow { opacity: 0.88; }
+.report .arrow.brilliant line { stroke: var(--brilliant); }
+.report .arrow.brilliant polygon { fill: var(--brilliant); }
+.report .arrow.great line { stroke: var(--great); }
+.report .arrow.great polygon { fill: var(--great); }
+.report .arrow.played line { stroke: var(--loss); }
+.report .arrow.played polygon { fill: var(--loss); }
+.report .arrow.best line { stroke: var(--win); }
+.report .arrow.best polygon { fill: var(--win); }
+.report .arrow.good line { stroke: var(--brilliant); }
+.report .arrow.good polygon { fill: var(--brilliant); }
+.report .arrow.reply line { stroke: var(--great); }
+.report .arrow.reply polygon { fill: var(--great); }
+.report .arrow.usual line { stroke: var(--text-2); }
+.report .arrow.usual polygon { fill: var(--text-2); }
+.report .mark-last { fill: rgba(255, 214, 51, 0.38); }
+.report .mark-good { fill: rgba(27, 175, 122, 0.55); }
+.report .mark-bad { fill: rgba(227, 73, 72, 0.50); }
+.report .btn { font: inherit; font-size: 13.5px; font-weight: 600; padding: 8px 14px; border-radius: 10px; cursor: pointer;
+    border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+.report .btn:hover { border-color: var(--muted); }
+.report .btn.primary { background: var(--text); color: var(--page); border-color: var(--text); }
+.report .btn:focus-visible { outline: 2px solid var(--win); outline-offset: 2px; }
+.report #pz-progress h4 { font-size: 13.5px; font-weight: 600; color: var(--text-2); margin: 14px 0 6px; }
+.report #pz-progress tr.total td { font-weight: 600; }
+.report #pz-progress td { white-space: nowrap; }
+.report #pz-progress td:first-child { white-space: normal; min-width: 9em; }
+@media (max-width: 760px) {
+.report #pz-body { display: flex; flex-direction: column; }
+.report #pz-play { order: 1; }
+.report #pz-kpis { order: 2; margin: 22px 0 0; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.report #pz-progress { order: 3; }
+.report #pz-body > .defs { order: 4; }
+.report #pz-kpis .kpi { padding: 10px 12px; }
+.report #pz-kpis .kpi .value { font-size: 21px; }
+}
+.report [data-facts] { scroll-margin-top: 150px; }
+.report .coach { line-height: 1.75; }
+.report .coach .sub { max-width: 90ch; }
+.report .coach h4 { font-size: 15px; margin: 0; font-weight: 650; }
+.report .coach .rich p { margin: 0 0 8px; max-width: 82ch; }
+.report .coach .rich ul, .report .coach .plan ul { margin: 0 0 8px; padding-inline-start: 20px; max-width: 82ch; }
+.report .coach th, .report .coach td { text-align: right; }
+.report .coach .tag { display: inline-block; font-size: 12px; font-weight: 650; color: var(--text-2); border: 1px solid var(--border);
+    border-radius: 999px; padding: 0 8px; margin-inline-end: 8px; line-height: 1.6; }
+.report .coach .claim { margin-bottom: 6px; }
+.report .coach .weekly { border: 1px solid var(--border); border-radius: 10px; padding: 2px 14px 8px; margin: 4px 0 18px; }
+.report .coach .weekly h3 { margin-top: 12px; }
+.report .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 12px; }
+.report .chip { font: inherit; font-size: 12px; line-height: 1.45; padding: 2px 9px; border-radius: 12px; text-align: left;
+    border: 1px solid var(--border); background: var(--page); color: var(--text-2); cursor: pointer; }
+.report .chip b { color: var(--text); font-weight: 650; font-variant-numeric: tabular-nums; }
+.report .chip .now { color: var(--text); font-weight: 650; }
+.report .chip:hover { border-color: var(--muted); color: var(--text); }
+.report .chip:focus-visible { outline: 2px solid var(--win); outline-offset: 2px; }
+.report .coach-items { display: grid; gap: 14px; }
+.report .coach-item { border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.report .coach-item .head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.report .coach-item .num { flex: none; width: 24px; height: 24px; border-radius: 50%; display: inline-grid; place-items: center;
+    font-size: 13px; font-weight: 650; color: #ffffff; background: var(--muted); }
+.report .coach-item.weak .num { background: var(--critical); }
+.report .coach-item.strong .num { background: var(--brilliant); }
+.report .coach .action { margin: 4px 0 0; padding: 8px 12px; background: var(--hover); border-inline-start: 3px solid var(--win);
+    border-radius: 6px; border-start-start-radius: 0; border-end-start-radius: 0; max-width: 82ch; }
+.report .coach .reel { margin: 4px 0 12px; }
+.report .coach .banner { border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; margin: 0 0 14px; background: var(--hover); }
+.report .coach .banner.warn { border-color: var(--critical); }
+.report .coach .banner ul { margin: 6px 0 0; padding-left: 20px; direction: ltr; text-align: left; font-size: 12.5px; }
+.report .coach .good { color: var(--up); font-weight: 600; }
+.report .coach .bad { color: var(--down); font-weight: 600; }
+.report .coach tr.few td { opacity: 0.7; }
+.report .coach .faded { opacity: 0.55; }
+.report .coach .target { white-space: nowrap; }
+.report .coach tr.target td { color: var(--text-2); font-weight: 600; }
+.report .coach .plan td:first-child { white-space: nowrap; font-weight: 600; vertical-align: top; }
+.report .coach .wide table { min-width: 900px; }
+.report .coach .wide td:first-child { white-space: nowrap; }
+.report .coach table.narrow { width: auto; min-width: min(100%, 560px); }
+.report .coach .three h4 { margin: 8px 0 4px; }
+@keyframes flash { from { box-shadow: 0 0 0 3px var(--win); } to { box-shadow: 0 0 0 3px transparent; } }
+.report .flash { animation: flash 1.8s ease-out; border-radius: 10px; }
+#tip { position: fixed; z-index: 50; display: none; pointer-events: none; min-width: 150px; max-width: 280px;
+    background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px;
+    box-shadow: var(--shadow); padding: 8px 10px; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+#tip .tt { color: var(--text-2); margin-bottom: 4px; }
+#tip .tr { display: flex; align-items: center; gap: 8px; }
+#tip .tk { width: 12px; height: 2px; border-radius: 1px; flex: none; }
+#tip .tv { font-weight: 650; }
+#tip .tl { color: var(--text-2); }
+#tip .tn { color: var(--text-2); margin-top: 4px; }

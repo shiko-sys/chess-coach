@@ -1,0 +1,815 @@
+{
+  "app": {
+    "name": "Chess Coach",
+    "loading": "Loading…",
+    "error": "Something went wrong: {message}",
+    "saved": "Saved",
+    "not_ready": "No numbers yet",
+    "not_ready_text": "The first update hasn't finished. It downloads your games and checks them with Stockfish; you can follow it in Settings > Updates & data.",
+    "phone_only_laptop": "This part works in the app on the laptop.",
+    "help_label": "What does this mean?",
+    "new_numbers": "New numbers are in"
+  },
+  "nav": {
+    "today": "Today",
+    "play": "Play",
+    "review": "Review",
+    "progress": "Progress",
+    "settings": "Settings"
+  },
+  "welcome": {
+    "title": "Welcome to Chess Coach",
+    "text": "It downloads your chess.com games, checks every move with Stockfish on this computer and turns your own mistakes into puzzles.",
+    "username": "Your chess.com username",
+    "timezone": "Your time zone",
+    "start": "Start",
+    "checking": "Checking…",
+    "not_found": "chess.com has no player with that name.",
+    "offline": "Couldn't reach chess.com. Check the internet connection and try again.",
+    "after": "Downloading your games and checking them takes a while the first time; the app shows the progress."
+  },
+  "sync": {
+    "up_to_date": "Up to date",
+    "running": "Updating…",
+    "stopped": "Last update stopped",
+    "failed": "Last update failed",
+    "never": "Not updated yet",
+    "last": "Last update: {when}",
+    "games": "{games} games, all checked",
+    "games_some": "{games} games, {analyzed} checked"
+  },
+  "when": {
+    "just_now": "just now",
+    "minutes": "{n} min ago",
+    "today": "today, {time}",
+    "last_night": "last night, {time}",
+    "yesterday": "yesterday, {time}",
+    "days": "{n} days ago",
+    "on": "{date}"
+  },
+  "update": {
+    "now": "Update now",
+    "running": "Updating…",
+    "step": "Step {step} of {steps}",
+    "steps": {
+      "start": "Starting",
+      "fetch": "Downloading new games from chess.com",
+      "parse": "Adding the new games",
+      "analyze": "Stockfish checks the new games",
+      "rescore": "Re-scoring your games",
+      "best": "Looking for Brilliant and Great moves",
+      "puzzles": "Making new puzzles",
+      "motifs": "Sorting your mistakes by type",
+      "report": "Building the numbers",
+      "phone": "Sending to your phone app"
+    },
+    "positions": "{done} of {total} positions",
+    "games": "{done} of {total} games",
+    "left": "about {time} left",
+    "done": "Done: {new_games} new games, {new_puzzles} new puzzles.",
+    "done_none": "Done: no new games.",
+    "stopped": "The last update stopped before the end. Everything finished before that is saved; the next update continues.",
+    "failed": "The last update failed: {error}",
+    "busy": "An update is already running.",
+    "background": "It runs in the background: you can keep using the app, or close it.",
+    "nightly_running": "The nightly update is running."
+  },
+  "settings": {
+    "kicker": "Settings",
+    "title": "Make it yours",
+    "pages": {
+      "look": "Look",
+      "account": "Your account",
+      "analysis": "Analysis",
+      "bot": "Gojo bot",
+      "data": "Updates & data",
+      "phone": "Phone app",
+      "language": "Language",
+      "licenses": "Licenses"
+    },
+    "look": {
+      "theme": "Light or dark",
+      "theme_hint": "\"Same as Windows\" follows your Windows setting.",
+      "themes": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "Same as Windows"
+      },
+      "boards": "Board colors",
+      "boards_hint": "Every board in the app uses these: puzzles, games and the bot.",
+      "pieces": "Pieces",
+      "pieces_hint": "Only sets with an open license, from Lichess's open-source repository. Authors and licenses are on the Licenses page.",
+      "highlights": "Highlight colors",
+      "last": "The last move",
+      "sel": "The piece you picked up",
+      "arrow": "Arrows (the best move)",
+      "speed": "Moving pieces",
+      "speed_hint": "How fast a piece slides to its square. Try it with \"Play a move\" on the preview.",
+      "speeds": {
+        "off": "Off",
+        "fast": "Fast",
+        "normal": "Normal",
+        "slow": "Slow"
+      },
+      "sounds": "Sounds",
+      "sound": "Play a sound when a piece moves",
+      "volume": "Volume",
+      "test": "Test",
+      "board": "On the board",
+      "coords": "Letters and numbers on the edges (a–h, 1–8)",
+      "dots": "Show where the picked-up piece can go",
+      "preview": "Preview",
+      "play_move": "Play a move"
+    },
+    "account": {
+      "username": "chess.com username",
+      "username_hint": "The games of this account are downloaded and analyzed.",
+      "check": "Check",
+      "found": "Found on chess.com.",
+      "change": "Use this account",
+      "change_note": "Changing it starts a separate profile with its own games, notes and puzzles. Your current one stays as it is, and switching back finds it again.",
+      "timezone": "Time zone",
+      "timezone_hint": "For \"time of day\" and the day a game counts in."
+    },
+    "analysis": {
+      "games": "Games to check",
+      "games_hint": "Which games Stockfish goes through.",
+      "all": "All my games",
+      "newest": "Only the newest",
+      "newest_hint": "Older games show results only, no mistakes.",
+      "depth": "How deep Stockfish looks",
+      "depth_hint": "Deeper is more exact but slower.",
+      "depths": {
+        "fast": "Fast",
+        "normal": "Normal",
+        "deep": "Deep",
+        "max": "Very deep",
+        "custom": "Custom"
+      },
+      "depth_text": "Stockfish looks at {nodes} positions for every move of your games.",
+      "depth_change": "Changing it makes the next update check every game again once: about {time} with {workers} copies. New games after that take a minute or two a night.",
+      "depth_same": "New games take a minute or two a night.",
+      "workers": "Stockfish copies at once",
+      "workers_hint": "More is faster but hotter and louder.",
+      "cooler": "Cooler",
+      "faster": "Faster",
+      "nightly": "Nightly update",
+      "nightly_hint": "Runs by itself; the app doesn't need to be open.",
+      "nightly_on": "Every night at 23:00, after 10 idle minutes, plugged in",
+      "nightly_next": "Next run: {when}",
+      "nightly_missing": "The nightly task isn't set up on this computer.",
+      "note": "Weekly note by the local model (Sundays)",
+      "note_missing": "Needs Ollama, which isn't installed."
+    },
+    "bot": {
+      "who": "Who you play",
+      "who_hint": "Used by Play. The blind test always mixes both.",
+      "gojo": "Gojo bot",
+      "gojo_hint": "Maia-3 trained on your own moves ({model})",
+      "gojo_missing": "Maia-3 trained on your own moves (not trained yet)",
+      "maia": "Base Maia-3",
+      "maia_hint": "Plays like an average human of the rating you pick",
+      "rating": "Rating",
+      "style": "Plays like your…",
+      "style_hint": "Which of your games it copies.",
+      "styles": {
+        "bullet": "Bullet",
+        "blitz": "Blitz",
+        "rapid": "Rapid"
+      },
+      "tuning": "Fine-tuning",
+      "tuning_hint": "Tuned on 25 Nov to match your real style.",
+      "temperature": "Surprise level",
+      "cutoff": "Ignore moves rarer than",
+      "cutoff_value": "{pct} of the top move",
+      "reset": "Reset to the tuned values",
+      "tuned": "These are the tuned values.",
+      "not_installed": "The bot isn't installed on this computer (run setup_bot.bat once)."
+    },
+    "data": {
+      "update": "Update now",
+      "update_hint": "New games, Stockfish, puzzles. Runs in the background; you can keep using the app or close it.",
+      "folder": "Your data folder",
+      "folder_hint": "Your games, notes, puzzles and settings. Kept apart from the app.",
+      "open": "Open folder",
+      "backups": "Backups",
+      "backups_hint": "A copy every Sunday; the newest {keep} stay.",
+      "newest": "Newest: {when}",
+      "none": "No backup yet.",
+      "backup_now": "Back up now",
+      "backing_up": "Backing up…",
+      "backup_done": "Backup saved.",
+      "logs": "Logs",
+      "logs_hint": "What each update printed, for when something goes wrong.",
+      "open_logs": "Open logs"
+    },
+    "phone": {
+      "send": "Send to my phone app",
+      "send_hint": "After each update, the newest numbers and puzzles go to your phone app.",
+      "on": "On",
+      "public": "Anyone with the link can open it. Search engines are asked not to list it.",
+      "off_hint": "Off: nothing is published.",
+      "open": "Open it"
+    },
+    "language": {
+      "app": "App language",
+      "app_hint": "All app text lives in one file, so more languages can be added.",
+      "note": "Your coach's notes and the puzzle explanations stay in Egyptian Arabic."
+    },
+    "licenses": {
+      "programs": "Programs and models",
+      "pieces": "Piece sets",
+      "name": "Name",
+      "what": "What it does here",
+      "license": "License",
+      "set": "Set",
+      "author": "Author",
+      "note": "Piece sets come from github.com/lichess-org/lila (public/piece), listed in its COPYING.md. Sets with a non-commercial or unclear license are left out. The sounds are made by the app's own code, and the knight icon is your own design."
+    }
+  },
+  "boards": {
+    "classic": "Classic",
+    "walnut": "Walnut",
+    "sea": "Sea",
+    "forest": "Forest",
+    "slate": "Slate",
+    "aqua": "Aqua",
+    "rose": "Rose",
+    "night": "Night"
+  },
+  "colors": {
+    "sun": "Sun",
+    "aqua": "Aqua",
+    "lime": "Lime",
+    "coral": "Coral",
+    "lilac": "Lilac",
+    "green": "Green",
+    "blue": "Blue",
+    "orange": "Orange",
+    "pink": "Pink"
+  },
+  "duration": {
+    "s": "{n} s",
+    "min": "{n} min",
+    "h": "{h} h {m} min",
+    "hours": "{n} hours"
+  },
+  "help": {
+    "games": [
+      "Games to check",
+      "Stockfish goes through every move of these games to find mistakes and best moves. Fewer games make the first check faster; the other games still count in results and ratings."
+    ],
+    "depth": [
+      "How deep Stockfish looks",
+      "For each position of your games, Stockfish looks at this many positions before it decides. More means fewer wrong verdicts, but more time. It's a fixed amount of work, so fast and slow processor cores give the same quality."
+    ],
+    "workers": [
+      "Stockfish copies at once",
+      "Each copy of Stockfish uses one processor core (this computer has {cores}). 4 is the tested default: fast enough, and the laptop stays cooler and quieter."
+    ],
+    "nightly": [
+      "Nightly update",
+      "Windows runs the update every night: new games, Stockfish, puzzles and the phone app. It waits until the computer has been idle for 10 minutes, so never while you play."
+    ],
+    "note": [
+      "Weekly note",
+      "Once a week a small AI model on this computer (Ollama) writes 2-4 short points from your weekly numbers, in Egyptian Arabic. Every number in it is checked against your data. Nothing goes online."
+    ],
+    "temperature": [
+      "Surprise level",
+      "How often the bot plays a less likely move instead of its favorite. Higher means more surprising moves. {tuned} was the closest match to your real games in the 25 November test."
+    ],
+    "cutoff": [
+      "Ignore rare moves",
+      "Moves the model finds much less likely than its favorite (under this share of its chance) are never played, so the bot doesn't make random-looking moves."
+    ],
+    "maia_rating": [
+      "Rating",
+      "Base Maia-3 was trained on millions of human games and plays like a person of this rating (Lichess scale, a bit higher than chess.com)."
+    ],
+    "pz_today": [
+      "Today's puzzles",
+      "Positions from your own games where you made a big mistake or missed a brilliant move. Find the best move: the board checks it against Stockfish's answer."
+    ],
+    "pz_new": [
+      "New",
+      "{per_day} new puzzles a day from your games of the last {days} days, newest first. When you finish them, you can ask for more."
+    ],
+    "pz_due": [
+      "Coming back",
+      "A puzzle you got wrong comes back after 1 day, then after 3 days, then after a week. Solve it at the one-week review and it counts as learned."
+    ],
+    "top_motif": [
+      "Your most common mistake",
+      "Of your big mistakes in the last 4 weeks made with 10 seconds or more on your clock, the most common kind: {motif}."
+    ],
+    "focus": [
+      "Your one thing to work on",
+      "The first weakness in your coach's notes, and the number from the notes that shows whether it's getting better, counted over your last 4 weeks. It changes when your coach writes new notes."
+    ],
+    "plan": [
+      "Today's plan",
+      "Your coach's weekly plan has a few tasks for each day of the week. Tick them off as you go; the ticks start fresh tomorrow."
+    ],
+    "converted": [
+      "Won from a winning position",
+      "Games where Stockfish gave you an 80% or better chance to win at some point (about 4 pawns ahead), and how many of them you went on to win. Your coach's goal is {goal}."
+    ],
+    "late_blunders": [
+      "Big mistakes after the opening",
+      "A big mistake (a blunder) drops your chance to win by 15 points or more. This counts them per 100 of your moves after move 10, only while the game was still open (20-80% chance to win). Lower is better; your coach's goal is {goal}."
+    ],
+    "abandoned": [
+      "Games you left",
+      "The share of games you left (closed or stopped playing) before they ended. Lower is better; your coach's goal is {goal}."
+    ],
+    "accuracy": [
+      "Accuracy",
+      "How close your moves were to Stockfish's best moves, from 0 to 100, with the formula Lichess publishes. Your coach's goal is {goal}."
+    ],
+    "top_motif_rate": [
+      "Your most common mistake, per 100 moves",
+      "How often you made your most common kind of big mistake, per 100 moves made with 10 seconds or more. Lower is better; your coach's goal is {goal}."
+    ],
+    "win_chance": [
+      "Chance to win",
+      "Stockfish's evaluation turned into a chance from 0% to 100%: 50% is equal, a pawn up is about 59%, three pawns about 75%."
+    ],
+    "blind": [
+      "Blind test",
+      "The app secretly picks Gojo bot or base Maia-3 (both play your book moves in the opening, so only the network differs). After the game you guess which one it was, and say whether it played entirely like you. Guessing right much more than half the time means Gojo bot really plays differently."
+    ],
+    "book": [
+      "Your book",
+      "In positions you reached at least 3 times, the bot plays one of your real moves there, the recent ones counting more. Elsewhere the trained model picks a move."
+    ],
+    "accuracy_game": [
+      "Accuracy",
+      "How close your moves in this game were to Stockfish's best moves, from 0 to 100. Games Stockfish hasn't checked yet have none."
+    ],
+    "blunders_game": [
+      "Big mistakes",
+      "Your moves in this game that dropped your chance to win by 15 points or more."
+    ],
+    "best_game": [
+      "Best moves",
+      "‼ Brilliant (a sacrifice that works) and ! Great (the only good move) moves you played in this game."
+    ],
+    "trend_blunders": [
+      "Big mistakes per 100 moves",
+      "Moves after move 10 that dropped your chance to win by 15 points or more, per 100 such moves, counted only while the game was still open. Lower is better."
+    ],
+    "trend_converted": [
+      "Won from a winning position",
+      "Of the games where Stockfish gave you an 80% or better chance to win at some point, the share you won. Higher is better."
+    ],
+    "trend_abandoned": [
+      "Games you left",
+      "The share of games you left before they ended. Lower is better."
+    ],
+    "pz_first": [
+      "Right the first time",
+      "Puzzles you solved on your first try, out of the ones you tried."
+    ],
+    "pz_learned": [
+      "Learned",
+      "Puzzles you got wrong at first and then solved at the one-week review."
+    ]
+  },
+  "today": {
+    "title": "Today",
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening"
+    },
+    "puzzles": "Today's puzzles",
+    "puzzles_sub": "Positions from your own games",
+    "count": "puzzles today",
+    "new": "New",
+    "due": "Coming back",
+    "done": "Done",
+    "start": "Start puzzles",
+    "continue": "Continue",
+    "first": "First up: your {tc} game {when} vs {opponent}{rating}. You're {color}.",
+    "motif": "Half of today's new puzzles practice your most common mistake: {motif}.",
+    "all_done": "All done for today",
+    "all_done_sub": "Next review: {when}.",
+    "no_reviews": "No reviews waiting.",
+    "none": "No puzzles yet: the update makes them from your games.",
+    "focus": "Your one thing to work on",
+    "focus_none": "Your coach hasn't written notes yet.",
+    "goal": "Goal {goal}",
+    "to_go": "{left} to go",
+    "reached": "Goal reached",
+    "focus_fine": "{scope}, last 4 weeks · {base}",
+    "advice": "نصيحة المدرب",
+    "read_notes": "Read your coach's notes →",
+    "plan": "Today's plan",
+    "plan_sub": "From your coach's weekly plan · {day}",
+    "plan_none": "Nothing planned for today.",
+    "update_title": "Your games",
+    "games_line": "{games} games · last game {when}"
+  },
+  "metrics": {
+    "converted": {
+      "short": "Won from a winning position",
+      "label": "of your {scope} games with a clearly winning position ended in a win",
+      "base": "{n} games with a winning position"
+    },
+    "late_blunders": {
+      "short": "Big mistakes after the opening",
+      "label": "big mistakes per 100 moves after the opening ({scope})",
+      "base": "{n} moves"
+    },
+    "abandoned": {
+      "short": "Games you left",
+      "label": "of your {scope} games you left before the end",
+      "base": "{n} games"
+    },
+    "accuracy": {
+      "short": "Accuracy",
+      "label": "your {scope} accuracy (how close your moves were to the best ones, 0-100)",
+      "base": "{n} games"
+    },
+    "top_motif": {
+      "short": "Your most common mistake",
+      "label": "times per 100 moves you made your most common mistake ({scope})",
+      "base": "{n} moves"
+    }
+  },
+  "scopes": {
+    "all": "All games",
+    "bullet": "Bullet",
+    "blitz": "Blitz",
+    "rapid": "Rapid",
+    "daily": "Daily"
+  },
+  "kinds": {
+    "missed": {
+      "label": "Missed brilliant",
+      "prompt": "You missed a brilliant sacrifice here. Find it."
+    },
+    "instead": {
+      "label": "Your blunder",
+      "prompt": "You blundered in this position. Find a better move."
+    },
+    "punish": {
+      "label": "Punish the blunder",
+      "prompt": "You just blundered here. Now play your opponent's side: find the move that punishes it."
+    }
+  },
+  "puzzles": {
+    "kicker": "Puzzles",
+    "back": "← Today",
+    "progress": "{done} of {total} done today",
+    "review": "review",
+    "keep_going": "Right! Keep going: your move {step} of up to {max}.",
+    "to_move": "{color} to move · move {move}",
+    "meta": "{tc} {control} · {date} · vs {opponent}{rating}",
+    "tap_piece": "Pick up one of the {color} pieces.",
+    "tap_square": "Now put it on its square.",
+    "no_move": "That piece has no legal move here.",
+    "answering": "Your opponent answers …",
+    "show": "Show the answer",
+    "right": "Right!",
+    "wrong": "Not this time",
+    "shown": "Here's the answer",
+    "found_all": "You found all {n} moves of the tactic.",
+    "best": "{move} is the best move here.",
+    "one_of_two": "{move} is one of the two good moves here.",
+    "kept": "{move} keeps a {mine} chance to win; the best move keeps {best}.",
+    "worse": "{move} is worse than all of Stockfish's 3 best moves here.",
+    "step": "Move {step}: ",
+    "theme": "Theme: {motif}",
+    "your_top": " (your most common mistake)",
+    "story_missed": "In the game you played {move} instead of the sacrifice.",
+    "story_instead": "In the game you played {move}.",
+    "story_punish": "This is right after your blunder {move}.",
+    "done_first": "Solved on the first try: it won't come back.",
+    "learned": "Learned: you solved it again at the one-week review.",
+    "tomorrow": "It comes back tomorrow.",
+    "in_days": "It comes back in {n} days.",
+    "chesscom": "Open this move on chess.com ↗",
+    "next": "Next puzzle",
+    "more": "{n} more new puzzles now",
+    "waiting": "{n} new puzzles are waiting; every day brings {per_day} of them.",
+    "no_new": "New games bring new puzzles: the update adds them.",
+    "all_solved": "You've solved every puzzle in your set",
+    "start": "Start",
+    "back_step": "Back",
+    "next_step": "Next",
+    "end": "End",
+    "explain": {
+      "idea": "الفكرة",
+      "escape": "ليه مفيش هروب",
+      "game": "في الماتش",
+      "clue": "إزاي تشوفها المرة الجاية"
+    },
+    "white": "White",
+    "black": "Black"
+  },
+  "play": {
+    "kicker": "Play",
+    "title": "Play Gojo bot",
+    "opponent": "Opponent",
+    "opponents": {
+      "fine": [
+        "Gojo bot",
+        "Maia-3 trained on your own moves ({model})"
+      ],
+      "blind": [
+        "Blind test",
+        "Gojo bot or base Maia-3, hidden: guess which one after the game"
+      ],
+      "maia": [
+        "Base Maia-3",
+        "Plays like an ordinary {elo} player"
+      ]
+    },
+    "color": "I play",
+    "colors": {
+      "white": "White",
+      "black": "Black",
+      "random": "Random"
+    },
+    "style": "It plays like your…",
+    "styles": {
+      "bullet": "bullet games",
+      "blitz": "blitz games",
+      "rapid": "rapid games"
+    },
+    "new": "New game",
+    "end": "End the game",
+    "press_new": "Press \"New game\".",
+    "waking": "Waking up the bot… (a few seconds the first time)",
+    "ready": "Ready. Model: {model} · book: {book} of your positions.",
+    "your_move": "Your move",
+    "check": "Your move: check!",
+    "thinking": "{bot} is thinking…",
+    "won": "You won",
+    "lost": "{bot} won",
+    "draw": "Draw",
+    "ended": "Game ended",
+    "reasons": {
+      "checkmate": "checkmate",
+      "stalemate": "stalemate",
+      "insufficient material": "not enough pieces to mate",
+      "threefold repetition": "repetition",
+      "fivefold repetition": "repetition",
+      "fifty moves": "the 50-move rule",
+      "seventyfive moves": "the 75-move rule",
+      "ended by you": "ended by you"
+    },
+    "who": "Opponent: {bot} · plays like your {style}",
+    "hidden": "hidden until you answer",
+    "from_book": "its last move came from your book (a move you really play here)",
+    "from_model": "its last move came from the model",
+    "q1": "Which one was it?",
+    "q2": "Did it play entirely like you?",
+    "base": "Base Maia-3",
+    "fine": "Gojo bot",
+    "yes": "Yes",
+    "no": "No",
+    "your_guess": "Your guess: {guess}.",
+    "it_was": "It was {it}. Your guess was {right}.",
+    "right": "right",
+    "wrong": "wrong",
+    "score": "Blind games: {right} of {games} guessed right. Played entirely like you: base Maia-3 {base}, Gojo bot {fine}.",
+    "score_none": "Blind games: none yet.",
+    "not_installed": "The bot isn't installed on this computer. Double-click setup_bot.bat once (it downloads about 2 GB), then open Play again.",
+    "phone": "Play works in the app on the laptop: the bot runs there.",
+    "who_maia": "Opponent: {bot}"
+  },
+  "review": {
+    "kicker": "Review",
+    "titles": {
+      "games": "Your games",
+      "mistakes": "Your mistakes",
+      "openings": "Your openings",
+      "best": "Your best moves",
+      "habits": "Your habits"
+    },
+    "tabs": {
+      "games": "My games",
+      "mistakes": "Mistakes",
+      "openings": "Openings",
+      "best": "Best moves",
+      "habits": "Habits"
+    },
+    "scope": "Time control",
+    "all_results": "All results",
+    "results": {
+      "win": "Wins",
+      "loss": "Losses",
+      "draw": "Draws"
+    },
+    "result_word": {
+      "win": "Won",
+      "loss": "Lost",
+      "draw": "Draw"
+    },
+    "cols": {
+      "date": "Date",
+      "opponent": "Opponent",
+      "result": "Result",
+      "accuracy": "Accuracy",
+      "mistakes": "Big mistakes",
+      "best": "Best moves",
+      "opening": "Opening"
+    },
+    "more": "Show more games",
+    "count": "{shown} of {total} games",
+    "not_checked": "not checked yet",
+    "back": "← All games",
+    "vs": "vs {opponent} ({rating})",
+    "you_played": "You played {color} · {tc} {control} · {when}",
+    "ended": "{result} by {end}",
+    "open": "Open this game on chess.com ↗",
+    "move_of": "Move {n} of {total}",
+    "start": "Start",
+    "prev": "Back",
+    "next": "Next",
+    "end": "End",
+    "next_mistake": "Next mistake of mine",
+    "chance": "Your chance to win: {before} → {after}",
+    "best_was": "Stockfish's move: {move}",
+    "verdicts": {
+      "blunder": "Big mistake",
+      "mistake": "Mistake",
+      "inaccuracy": "Small slip",
+      "brilliant": "Brilliant",
+      "great": "Great",
+      "missed": "Missed brilliant"
+    },
+    "no_analysis": "Stockfish hasn't checked this game yet: the next update does.",
+    "phone": "My games works in the app on the laptop (the phone shows the summaries).",
+    "chart": "Your chance to win, move by move"
+  },
+  "sections": {
+    "results": [
+      "Results",
+      "How many games you won, drew and lost: all together, with White and with Black, and in each time control."
+    ],
+    "ratings": [
+      "Rating over time",
+      "Your chess.com rating at the end of each day you played, for rated games. A flat stretch means you didn't play that time control then."
+    ],
+    "accuracy": [
+      "Accuracy",
+      "How close your moves were to Stockfish's best moves, from 0 to 100, with the formula Lichess publishes. About 1 point higher than chess.com's Game Review on average."
+    ],
+    "phases": [
+      "Mistakes by game phase",
+      "Big mistakes per 100 of your moves in the opening (moves 1-10), the middlegame and the endgame (6 or fewer queens, rooks, bishops and knights left). Only moves made while the game was still open count (20-80% chance to win): once a game is decided, nothing can be called a big mistake."
+    ],
+    "clock": [
+      "Big mistakes and the clock",
+      "How often you make a big mistake depending on how much time you had left when the move started. The opening isn't counted: you nearly always have time there."
+    ],
+    "motifs": [
+      "Mistake types",
+      "What kind of big mistake each one was, read from Stockfish's best line: a piece left where it can be taken for free, a fork, a pin, a missed mate, and so on. A pattern only counts when its line really wins material."
+    ],
+    "best": [
+      "Best moves",
+      "Brilliant: a sacrifice that works (you give up material and you're still fine). Great: the only good move in the position (every other move would have been a big mistake). Your opponents' moves are judged by the same rules."
+    ],
+    "reel": [
+      "Highlight reel",
+      "Your best Brilliant and Great moves, at most one per game, each on a board seen from your side. The arrow is the move."
+    ],
+    "missed": [
+      "Missed brilliants",
+      "Positions where a brilliant sacrifice was the best move, and you played a move that cost at least 10 points of your chance to win instead."
+    ],
+    "openings": [
+      "Openings",
+      "Your results in the openings you play most, with White and with Black. Lighter numbers rest on few games, so they can swing a lot."
+    ],
+    "drops": [
+      "Where your results drop",
+      "In each opening you played 150+ times, the move after which your score falls the most, and whether Stockfish thinks that move itself is bad (only when your chance to win falls by 5+ points)."
+    ],
+    "endings": [
+      "How your games end",
+      "For wins, what happened to your opponent (checkmate, time, resigned, left); for losses, what happened to you."
+    ],
+    "ends": [
+      "Games decided on time or by leaving",
+      "Where you stood when a game ended on time or because someone left: winning, about equal or losing. In bullet the clock decides many games from both sides."
+    ],
+    "hours": [
+      "Time of day",
+      "How many games you play at each hour, and whether you win more or less than usual at that hour."
+    ],
+    "tilt": [
+      "Playing after losses",
+      "Your win rate right after losing several games in a row in the same session (a break of 30 minutes starts a new session), and how you do as a session goes on."
+    ],
+    "rating-diff": [
+      "Stronger and weaker opponents",
+      "Your score against opponents rated above or below you (a draw counts half), next to what the rating difference predicts."
+    ],
+    "coach": [
+      "Coach's notes",
+      "Written in Egyptian Arabic by Claude from your numbers. Every number in the text must be one of your real numbers: the chips under each paragraph show where it comes from, and the notes are checked before they show."
+    ]
+  },
+  "terms": {
+    "games": [
+      "Games",
+      "How many games are counted here."
+    ],
+    "win rate": [
+      "Win rate",
+      "The share of these games you won."
+    ],
+    "your accuracy": [
+      "Your accuracy",
+      "How close your moves were to Stockfish's best, from 0 to 100, averaged over these games."
+    ],
+    "centipawn loss per move": [
+      "Average loss per move",
+      "How much worse than Stockfish's best move your moves were on average, in hundredths of a pawn. Lower is better."
+    ],
+    "blunders": [
+      "Big mistakes (blunders)",
+      "A move that drops your chance to win by 15 points or more."
+    ],
+    "mistakes": [
+      "Mistakes",
+      "A move that drops your chance to win by 10 to 15 points."
+    ],
+    "made in time trouble": [
+      "Made in time trouble",
+      "Big mistakes made with less than 10 seconds on your clock."
+    ],
+    "your top motif": [
+      "Your most common mistake",
+      "The most common kind of big mistake in the last 4 weeks, made with 10+ seconds on your clock."
+    ],
+    "brilliant moves": [
+      "Brilliant moves",
+      "Sacrifices that work: you give up material and you are still fine afterwards. Per 100 games."
+    ],
+    "great moves": [
+      "Great moves",
+      "The only good move in the position: every other move would have been a big mistake."
+    ],
+    "missed brilliants": [
+      "Missed brilliants",
+      "Positions where a brilliant sacrifice was the best move and you played something else that cost 10+ points."
+    ],
+    "win rate in games with your brilliant": [
+      "Win rate with a Brilliant",
+      "How often you won the games in which you played a Brilliant move."
+    ],
+    "in total": [
+      "In total",
+      "All of them together, in these games."
+    ]
+  },
+  "progress": {
+    "kicker": "Progress",
+    "titles": {
+      "ratings": "Are you getting better?",
+      "trends": "Mistakes, week by week",
+      "coach": "Your coach's notes",
+      "puzzles": "Your puzzle progress"
+    },
+    "tabs": {
+      "ratings": "Ratings",
+      "trends": "Trends",
+      "coach": "Coach's notes",
+      "puzzles": "Puzzles"
+    },
+    "trends_intro": "Each point counts your last 4 weeks up to that week, so one bad day doesn't swing it. The dashed line is your coach's goal.",
+    "chart_blunders": "Big mistakes per 100 moves after the opening",
+    "chart_converted": "Won from a winning position",
+    "chart_abandoned": "Games you left",
+    "goal": "Goal {goal}",
+    "no_goal": "No goal set",
+    "week_of": "Week of {date}",
+    "few": "Few games those weeks: the line can swing.",
+    "pz_by_theme": "By theme",
+    "pz_weeks": "New puzzles, week by week",
+    "pz_none": "Nothing tried yet in this app: your progress shows here after your first puzzle. (Your phone keeps its own progress.)",
+    "cols": {
+      "theme": "Theme",
+      "first": "Right the first time",
+      "back": "Coming back",
+      "learned": "Learned",
+      "set": "In your set",
+      "week": "Week",
+      "tried": "New puzzles tried",
+      "right": "Right the first time"
+    },
+    "all_themes": "All themes",
+    "untyped": "No type yet",
+    "top": " (your most common mistake)",
+    "of": "{a} of {b}",
+    "log_since": "Answers are logged since {date}.",
+    "pz_note": "The real sign that the training works is in your games: the trend of your most common mistake (Trends)."
+  }
+}
